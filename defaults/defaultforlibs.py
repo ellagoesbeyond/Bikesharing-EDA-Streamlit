@@ -20,10 +20,10 @@ def add_logo():
         """
         <style>
             [data-testid="stSidebarNav"] {
-                background-image: url(https://images.squarespace-cdn.com/content/v1/5a7a33842aeba5b53517c812/1521604039742-KVLQSXYYUIM1JW98VXF9/CCC.png?format=2500w);
+                background-image: url(https://static.thenounproject.com/png/410860-200.png);
                 background-repeat: no-repeat;
                 padding-top: 120px;
-                background-position: 30px 30px;
+                background-position: 10px 10px;
             }
             [data-testid="stSidebarNav"]::before {
                 content: "";
@@ -38,4 +38,3 @@ def add_logo():
         unsafe_allow_html=True,
     )
 
-    

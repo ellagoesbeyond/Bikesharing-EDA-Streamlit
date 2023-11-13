@@ -22,10 +22,10 @@ st.markdown(
 
     ### Table of Contents
     1. [Data Exploration](https://pythongroup06bikesharingdata.streamlit.app/Analysis)
-    2. [Data Visualization](#Data-Visualization)
-    3. [Data Modeling](#Data-Modeling)
-    4. [Data Prediction](#Data-Prediction)
-    5. [Data Conclusion](#Data-Conclusion)
+    2. [Data Visualization](https://pythongroup06bikesharingdata.streamlit.app/Visualization)
+    3. [Data Modeling](https://pythongroup06bikesharingdata.streamlit.app/Modeling)
+    4. [Data Prediction](https://pythongroup06bikesharingdata.streamlit.app/Prediction)
+    5. [Data Conclusion](https://pythongroup06bikesharingdata.streamlit.app/Conclusion)
     """
    
 )

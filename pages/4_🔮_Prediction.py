@@ -40,7 +40,7 @@ tick_spacing = 100
 plt.xticks(final_df['dteday'][::tick_spacing], rotation=45)
 st.pyplot(plt)
 
-tab1, tab2 = st.tabs(["Try it out!"])
+tab1, tab2 = st.tabs(["Try it out!",""])
  
 with tab1: 
     st.header("Predict the hourly demand of bikes")

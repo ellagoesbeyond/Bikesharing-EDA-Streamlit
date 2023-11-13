@@ -11,10 +11,10 @@ import streamlit as st
 import  streamlit_toggle as tog
 
 # Import the function from the module located in the specified directory
-sys.path.append('02/group06/pipeline_df_for_streamlit.py')  
+sys.path.append('scripts/pipeline_df_for_streamlit.py')  
 from pipeline_df_for_streamlit import preped_data
 
-sys.path.append ('02/group06/defaultforlibs.py')
+sys.path.append ('defaults/defaultforlibs.py')
 from defaultforlibs import default_plt
 
 # defaults for plots
@@ -28,7 +28,6 @@ tab1, tab2 = st.tabs(["📈 Chart", "🗃 Summary"])
 with tab1:
      
     st.title("Insights about our User Groups")
-    import streamlit as st
 
     # Set the sidebar title
     st.sidebar.title("Options")

@@ -61,15 +61,55 @@ def notes():
     if st.download_button('Save your notes!', txt):
         st.write('Your notes have been saved!')
 
+def actions():
+    st.header('Summary of Actions')
+    multi =("""
+    # Business Insights on Bike Usage Patterns
+
+    ## User Patterns
+
+    ### Casual User Pattern: "Leisure Users"
+    - **Primary Usage**: During weekends and good weather.
+    - **Demand Peak**: Around noon.
+
+    ### Registered User Pattern: "Get to Work Users"
+    - **Primary Usage**: During weekdays, less sensitive to weather.
+    - **Demand Peak**: Morning and afternoon (start/end of working day).
+    - **Note**: In very bad weather (heavy rain, ice, thunderstorm, mist, snow, fog), usage drops significantly, with most users being registered ones.
+
+    ## Demand Overview
+    - Over a two-year period, **~70%** of daily demand comes from registered users.
+    - Year-over-Year (YoY) demand increase is higher for registered users compared to casual users.
+
+    ## Advantages of Data/Insights
+
+    1. **Boost Customer Satisfaction**: Anticipating demand peaks to adjust bike supply, enhancing satisfaction and loyalty.
+    2. **Operational Costs**: Optimizing bike supply to match demand, reducing excess supply costs.
+    3. **Bike Availability**: Predicting demand fluctuations to schedule optimal times for bike redistribution and maintenance.
+    4. **Demand Boosting**: Offering discounts during low demand periods (nights, cold weather) to attract price-sensitive customers.
+    5. **Alternative Revenue Streams**: Renting out excess bikes in low demand periods (winter, night) to delivery services.
+
+    ## Considerations Beyond Current Analysis
+
+    - **Bike Location**: Lack of location data could lead to unavailability in certain city regions, affecting revenue.
+    - **Station Capacity**: Absence of station capacity data might deter potential users due to parking issues.
+    - **District Analysis**: Bike location data could identify districts with high or low bike supply.
+    - **Travel Distance**: Information on travel distances could reveal more detailed usage patterns and preferences, like the need for E-bikes for longer trips.
+
+    """)
+    st.markdown(multi, unsafe_allow_html=True)
+
 # Main app structure
 def main():
     st.title("Actions to take! 🫵🏽")
-    st.header("based on our analysis")
+    
     st.subheader("We have divided them into short-term and long-term initiatives")
     st.write("Feel free to take a look at our notes and write your own.")
     
-    tab1, tab2, tab3= st.tabs(['Short-Term Initiatives 🪄', 'Long-Term Initiatives ⏳',"Notes 📝"])
+    tab1, tab2, tab3,tab4= st.tabs(["Summary of Actions",'Short-Term Initiatives 🪄', 'Long-Term Initiatives ⏳',"Notes 📝"])
 
+    with tab1:
+        actions()
     with tab1:
         short_term_initiatives()
     with tab2:

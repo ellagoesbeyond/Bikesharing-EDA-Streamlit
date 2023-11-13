@@ -33,9 +33,9 @@ from scripts.model_registered_user import registered_model
 
 
 st.title("Joined Model Prediction")
-final_df = pd.read_csv("bike_sharing_output.csv")
+final_df = pd.read_csv("data/bike_sharing_output.csv")
 sns.lineplot
-st.line_chart (final_df[["total_pred_lightgbm"]],)
+st.line_chart (final_df[["total_pred_lightgbm"]])
 
 tab1, tab2 = st.tabs(["Try it out!"])
  

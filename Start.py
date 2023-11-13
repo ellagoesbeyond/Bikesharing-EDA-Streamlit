@@ -1,5 +1,27 @@
 import streamlit as st
-
+def add_logo():
+    st.markdown(
+        """
+        <style>
+            [data-testid="stSidebarNav"] {
+                background-image: url(http://placekitten.com/200/200);
+                background-repeat: no-repeat;
+                padding-top: 120px;
+                background-position: 20px 20px;
+            }
+            [data-testid="stSidebarNav"]::before {
+                content: "My Company Name";
+                margin-left: 20px;
+                margin-top: 20px;
+                font-size: 30px;
+                position: relative;
+                top: 100px;
+            }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+add_logo()
 
 st.set_page_config(
     page_title="Washington D.C Bike Sharing",
@@ -49,6 +71,3 @@ with my_expander_2:
 *Please note this is a final group assignment for Python 2 course by Daniel Garcia Hernandez at IE School of Science and Technology*
     """
 
-sidebar = st.sidebar
-with sidebar:
-    st.image("pics/ielogo.png", use_column_width=True)

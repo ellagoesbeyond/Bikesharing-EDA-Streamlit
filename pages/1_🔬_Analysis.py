@@ -5,7 +5,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import plotly.express as px
+import plotly as px
 import sys
 
 sys.path.append('02/group06/pipeline_df_for_streamlit.py')  
@@ -130,7 +130,7 @@ if target_options == "First Analysis":
 
     st.divider()
     # Donut Chart count of registered and casual users in dataset
-    fig = px.pie(df, values=[df['casual'].sum(),df['registered'].sum()], names=['casual','registered'], title='Count of registered and casual users in dataset')
+    fig = px.express.pie(df, values=[df['casual'].sum(),df['registered'].sum()], names=['casual','registered'], title='Count of registered and casual users in dataset')
     st.plotly_chart(fig)
 
     st.divider()

@@ -1,0 +1,8 @@
+streamlit
+sys
+matplotlib.pyplot
+seaborn
+pandas
+streamlit_toggle
+plotly
+math

@@ -1,5 +1,7 @@
 streamlit
 sys
+matplotlib.pyplot 
+numpy
 matplotlib
 seaborn
 pandas

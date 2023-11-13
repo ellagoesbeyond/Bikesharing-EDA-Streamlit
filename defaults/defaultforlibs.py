@@ -3,6 +3,7 @@
 
 import matplotlib.pyplot as plt
 import plotly.express as px
+import streamlit as st
 #use the code below  for import in the other files
 def default_plt():
     #viridis_colors = px.colors.sequential.Viridis  # Access the Viridis sequential color scale

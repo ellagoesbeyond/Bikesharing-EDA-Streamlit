@@ -3,7 +3,7 @@ matplotlib
 numpy
 seaborn
 pandas
-math
-streamlit_toggle
+
+
 
 

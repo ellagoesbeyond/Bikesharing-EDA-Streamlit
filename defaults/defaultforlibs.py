@@ -16,7 +16,6 @@ def default_plt():
     return colors
 
 def add_logo():
-
     st.markdown(
         """
         <style>
@@ -38,3 +37,5 @@ def add_logo():
         """,
         unsafe_allow_html=True,
     )
+
+    

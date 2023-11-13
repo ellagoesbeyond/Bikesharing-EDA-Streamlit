@@ -12,25 +12,24 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 from math import sqrt
-sys.path.append ('02/group06/')
-from important_pipeline import OutlierClipper
-from important_pipeline import RemoveRedundant
-from important_pipeline import MinMaxScaler
-
+sys.path.append ('scripts/')
+from scripts.important_pipeline import OutlierClipper
+from scripts.important_pipeline import RemoveRedundant
+from scripts.important_pipeline import MinMaxScaler
 
 
 # Import the function from the module located in the specified directory
-sys.path.append('02/group06/pipeline_df_for_streamlit.py')  
-from pipeline_df_for_streamlit import preped_data
+sys.path.append('scripts/pipeline_df_for_streamlit.py')  
+from scripts.pipeline_df_for_streamlit import preped_data
 
-sys.path.append ('02/group06/defaultforlibs.py')
-from defaultforlibs import default_plt
+sys.path.append ('defaults/defaultforlibs.py')
+from defaults.defaultforlibs import default_plt
 
-sys.path.append ('02/group06/model_casual_user.py')
-from model_casual_user import casual_model
+sys.path.append ('scripts/model_casual_user.py')
+from scripts.model_casual_user import casual_model
 
-sys.path.append ('02/group06/model_registered_user.py')
-from model_registered_user import registered_model
+sys.path.append ('scripts/model_registered_user.py')
+from scripts.model_registered_user import registered_model
 
 
 st.title("Joined Model Prediction")

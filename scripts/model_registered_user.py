@@ -25,13 +25,13 @@ from math import sqrt
 
 
 # Import the function from the module located in the specified directory
-sys.path.append('02/group06/pipeline_df_for_streamlit.py')  
+sys.path.append('scripts/pipeline_df_for_streamlit.py')  
 from pipeline_df_for_streamlit import preped_data
 
-sys.path.append ('02/group06/')
-from important_pipeline import OutlierClipper
-from important_pipeline import RemoveRedundant
-from important_pipeline import MinMaxScaler
+sys.path.append ('scripts/')
+from scripts.important_pipeline import OutlierClipper
+from scripts.important_pipeline import RemoveRedundant
+from scripts.important_pipeline import MinMaxScaler
 
 
 def registered_model():
@@ -80,7 +80,7 @@ def registered_model():
     # here i want to u the pipline with the following estimators. 
 
     # Load the dictionary from the file
-    with open('registered_best_estimator.pkl', 'rb') as file:
+    with open('models/registered_best_estimator.pkl', 'rb') as file:
         pipelines = pickle.load(file)
 
     # Now you can use the pipelines as needed
@@ -91,7 +91,7 @@ def registered_model():
     Y_pred = registered_pipeline.predict(X_test)
 
     #read the best cv resutls 
-    best_cv_results=pd.read_csv('best_cv_results_registered_lightbm.csv',index_col=0)
+    best_cv_results=pd.read_csv('models/best_cv_results_registered_lightbm.csv',index_col=0)
     val_scores={}
     val_scores['RMSE'] = best_cv_results[best_cv_results['rank_test_RMSE'] == 1]['mean_test_RMSE'].values[0]
     val_scores['MAPE'] = best_cv_results[best_cv_results['rank_test_RMSE'] == 1]['mean_test_MAPE'].values[0]

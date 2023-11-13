@@ -168,23 +168,31 @@ if target_options == "Casual Users":
         st.write(f"RMSE: {round(val_scores['RMSE'],2)}")
         st.write(f"MAE: {round(val_scores['MAE'],2)}")
         st.write(f"MAPE: {round(val_scores['MAPE'],2)}")
+        mulit="""
+
+
+        **TRAIN** Dates where: \n
+        - Start: 2011-01-01 \n
+        - End: 2012-05-28 \n
+        """
+        st.markdown(mulit)
     with col2:
         st.write("Test Scores")
         st.write(f"RMSE: {round(test_scores['RMSE'],2)}")
         st.write(f"MAE: {round(test_scores['MAE'],2)}")
         st.write(f"MAPE: {round(test_scores['MAPE'],2)}")
+        mulit="""
+
+
+        **TEST** Dates where: \n
+        - Start: 2012-05-29 \n
+        - End: 2012-12-31 \n
+        """
+        st.markdown(mulit)
     
     st.divider()
     
-    mulit="""
-    **TRAIN** Dates where: \n
-    - Start: 2011-01-01 \n
-    - End: 2012-05-28 \n
-    **TEST** Dates where: \n
-    - Start: 2012-05-29 \n
-    - End: 2012-12-31 \n
-    """
-    st.markdown(mulit)
+    st.subheader("Forecast period acutal vs. error for Casual Users")
     #plot
     plt.figure(figsize=(35, 10))
     plt.title(f"LIGHTXBG Forecast period acutal vs. error")
@@ -225,6 +233,8 @@ if target_options == "Registered Users":
         st.write(f"MAE: {round(val_scores['MAE'],2)}")
         st.write(f"MAPE: {round(val_scores['MAPE'],2)}")
         mulit="""
+
+
         **TRAIN** Dates where: \n
         - Start: 2011-01-01 \n
         - End: 2012-05-28 \n
@@ -236,6 +246,8 @@ if target_options == "Registered Users":
         st.write(f"MAE: {round(test_scores['MAE'],2)}")
         st.write(f"MAPE: {round(test_scores['MAPE'],2)}")
         mulit="""
+
+
         **TEST** Dates where: \n
         - Start: 2012-05-29 \n
         - End: 2012-12-31 \n
@@ -245,12 +257,14 @@ if target_options == "Registered Users":
     st.divider()
     
     #plot
+    st.subheader("Forecast period acutal vs. error for Registered  Users")
     plt.figure(figsize=(35, 10))
     plt.title(f"LIGHTXBG Forecast period acutal vs. error")
     sns.lineplot(x=dates_test, y=Y_pred, color='darksalmon', linestyle='dashed', label='Forecast')
 
     sns.lineplot(x=dates_test,y= y_test, color='seagreen', label='actual')
-  
+    
+    st.divider()
     
     st.pyplot(plt)
 

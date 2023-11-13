@@ -174,74 +174,78 @@ if target_options == "First Analysis":
 if target_options == "Outlier Analysis":
     # 3. OUTLIERS
     st.header("Outlier Analysis")
-    expand_boxplot = st.expander(label='Boxplot Analysis')
-    with expand_boxplot:
-        st.subheader("Here you can see the distribution of the data in the columns")
-        
-        # Create a dictionary mapping original column names to user-friendly names
-        column_mapping = {
-            'hum': 'humidity',
-            'weathersit': 'weather situation',
-            "atemp": "feels like temperature",
-            "windspeed": "wind speed",
-            "cnt": "count",
-            "temp": "temperature",
-            "yr": "year",
-            "mnth": "month",
-            "holiday": "holiday",
-            "weekday": "weekday",  
-            "workingday": "workingday",
-            "season": "season",
-            "instant": "instant",
-            "dteday": "date",
-            "casual": "casual users",
-            "registered": "registered users",
-            "hr": "hour"
-            # Add more mappings as needed
-        }
-        
-        # Dropdown for selecting column with user-friendly names
-        selected_column = st.selectbox("Select a Column", list(column_mapping.values()))
-        
-        # Reverse the mapping to get the original column name based on user-friendly name
-        original_column_name = [key for key, value in column_mapping.items() if value == selected_column][0]
-        
-        # Display box plot based on user selection
+    tab1, tab2 = st.tabs(["Summary 📄", "Insights 👀"])
+    with tab1:
+        st.subheader("Summary of Outlier Analysis")
+        multi= ("""
+        **SUMMARY**:
+        1. `Casual`, `registered`, and `count` categories display significant outliers, with values reaching maximum extremes.
+        2. `Weather situations` are predominantly categorized as 1 or 2, with category 3 being less common and category 4 extremely rare.
+        3. `Humidity` levels at 0 are very uncommon in the dataset.
+        4. `Wind speed` typically ranges between 1.8 to 0.23, with a few notable extremes, particularly values above the 75th percentile, which range from 0.5 to 0.8.
+        5. `Casual users` are generally observed in the range of 0 to 50, with the 75th percentile around 110, but there are some outliers stretching up to 360.
+        6. `Registered users` usually fall between 50 to 210, with the 75th percentile nearing 460; however, many outliers exist, reaching as high as approximately 800 times the typical values.
+        7. The `count of total users` typically lies between 100 to 500, with the 75th percentile at about 700, but numerous outliers are present, with the maximum reaching around 900 times the median values."""
+        )
+        st.markdown(multi)
+    with tab2:
+        expand_boxplot = st.expander(label='Boxplot Analysis')
+        with expand_boxplot:
+            st.subheader("Here you can see the distribution of the data in the columns")
+            
+            # Create a dictionary mapping original column names to user-friendly names
+            column_mapping = {
+                'hum': 'humidity',
+                'weathersit': 'weather situation',
+                "atemp": "feels like temperature",
+                "windspeed": "wind speed",
+                "cnt": "count",
+                "temp": "temperature",
+                "yr": "year",
+                "mnth": "month",
+                "holiday": "holiday",
+                "weekday": "weekday",  
+                "workingday": "workingday",
+                "season": "season",
+                "instant": "instant",
+                "dteday": "date",
+                "casual": "casual users",
+                "registered": "registered users",
+                "hr": "hour"
+                # Add more mappings as needed
+            }
+            
+            # Dropdown for selecting column with user-friendly names
+            selected_column = st.selectbox("Select a Column", list(column_mapping.values()))
+            
+            # Reverse the mapping to get the original column name based on user-friendly name
+            original_column_name = [key for key, value in column_mapping.items() if value == selected_column][0]
+            
+            # Display box plot based on user selection
 
-        plt.title(selected_column)  # Set the title based on user-friendly column name
-        sns.set(rc={'figure.figsize':(10,6)})  # Set the plot size
-        sns.boxplot(data=df[original_column_name].values)
-        plt.xlabel(original_column_name)  # Set the x-axis label
-        plt.ylabel("Values")  # Set the y-axis label
-        st.pyplot(plt)  # Display the plot in Streamlit app
+            plt.title(selected_column)  # Set the title based on user-friendly column name
+            sns.set(rc={'figure.figsize':(10,6)})  # Set the plot size
+            sns.boxplot(data=df[original_column_name].values)
+            plt.xlabel(original_column_name)  # Set the x-axis label
+            plt.ylabel("Values")  # Set the y-axis label
+            st.pyplot(plt)  # Display the plot in Streamlit app
 
-    # Insights for Outlier Analysis
-    st.subheader("Insights for Outlier Analysis")
-    
-    multi= ("""
-    **OBSERVATION**:
-    - Casual, registered and count have some severe outliers to max
-    - `weather situation` --> mostly between 1-2 rarely 3 and very rare is 4
-    - `humidity` --> very rare at 0
-    - `wind speed` : mostly between 1.8-0.23 a couple of extreme values (above 75Percentile at 0.5 above up until 0.8x)
-    - `casual users`: mostly 0-50 75Percentile~110, some outliers above up until 360
-    - `registered users`: mostly between 50-210 75% at ~460 , many outliers above , max is 800x
-    - `count`: mostly between 100-500 75% at ~700, many outliers above, max is 900x"""
-    )
-    st.markdown(multi)
-    st.divider()
-    st.subheader("Summary of Outlier Analysis")
-    multi= ("""
-    **SUMMARY**:
-    1. `Casual`, `registered`, and `count` categories display significant outliers, with values reaching maximum extremes.
-    2. `Weather situations` are predominantly categorized as 1 or 2, with category 3 being less common and category 4 extremely rare.
-    3. `Humidity` levels at 0 are very uncommon in the dataset.
-    4. `Wind speed` typically ranges between 1.8 to 0.23, with a few notable extremes, particularly values above the 75th percentile, which range from 0.5 to 0.8.
-    5. `Casual users` are generally observed in the range of 0 to 50, with the 75th percentile around 110, but there are some outliers stretching up to 360.
-    6. `Registered users` usually fall between 50 to 210, with the 75th percentile nearing 460; however, many outliers exist, reaching as high as approximately 800 times the typical values.
-    7. The `count of total users` typically lies between 100 to 500, with the 75th percentile at about 700, but numerous outliers are present, with the maximum reaching around 900 times the median values."""
-    )
-    st.markdown(multi)
+        # Insights for Outlier Analysis
+        st.subheader("Insights for Outlier Analysis")
+        
+        multi= ("""
+        **OBSERVATION**:
+        - Casual, registered and count have some severe outliers to max
+        - `weather situation` --> mostly between 1-2 rarely 3 and very rare is 4
+        - `humidity` --> very rare at 0
+        - `wind speed` : mostly between 1.8-0.23 a couple of extreme values (above 75Percentile at 0.5 above up until 0.8x)
+        - `casual users`: mostly 0-50 75Percentile~110, some outliers above up until 360
+        - `registered users`: mostly between 50-210 75% at ~460 , many outliers above , max is 800x
+        - `count`: mostly between 100-500 75% at ~700, many outliers above, max is 900x"""
+        )
+        st.markdown(multi)
+        
+  
     
 if target_options == "Correlation Analysis":
     # 4. CORRELATION ANALYSIS

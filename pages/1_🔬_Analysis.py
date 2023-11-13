@@ -6,14 +6,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
-import pandas_profiling
-from streamlit_pandas_profiling import st_profile_report
 import sys
-sys.path.append('02/group06/pipeline_df_for_streamlit.py')  # Appending the directory containing pipeline_df_for_streamlit.py to the Python path
-# Import the function from the module located in the specified directory
+
+sys.path.append('02/group06/pipeline_df_for_streamlit.py')  
 from pipeline_df_for_streamlit import preped_data
+
 sys.path.append ('02/group06/defaultforlibs.py')
 from defaultforlibs import default_plt
+
 import streamlit as st
 import pandas as pd
 

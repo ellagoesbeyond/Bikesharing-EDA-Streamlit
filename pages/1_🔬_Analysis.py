@@ -178,7 +178,6 @@ if target_options == "Outlier Analysis":
     with tab1:
         st.subheader("Summary of Outlier Analysis")
         multi= ("""
-        **SUMMARY**:
         1. `Casual`, `registered`, and `count` categories display significant outliers, with values reaching maximum extremes.
         2. `Weather situations` are predominantly categorized as 1 or 2, with category 3 being less common and category 4 extremely rare.
         3. `Humidity` levels at 0 are very uncommon in the dataset.

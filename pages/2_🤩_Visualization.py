@@ -12,10 +12,10 @@ import  streamlit_toggle as tog
 
 # Import the function from the module located in the specified directory
 sys.path.append('scripts/pipeline_df_for_streamlit.py')  
-from pipeline_df_for_streamlit import preped_data
+from scripts.pipeline_df_for_streamlit import preped_data
 
 sys.path.append ('defaults/defaultforlibs.py')
-from defaultforlibs import default_plt
+from defaults.defaultforlibs import default_plt
 
 # defaults for plots
 colors=default_plt()

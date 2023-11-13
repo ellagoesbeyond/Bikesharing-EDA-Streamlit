@@ -5,10 +5,10 @@ import numpy as np
 
 def preped_data():
     # Define file paths
-    input_file = 'bike-sharing-hourly.csv'
+    input_file = 'data/bike-sharing-hourly.csv'
 
     # Read in input file
-    data = pd.read_csv(data/input_file)
+    data = pd.read_csv(input_file)
 
     data.set_index('instant',inplace=True) # set instant as index as this is the index of the dataset
 

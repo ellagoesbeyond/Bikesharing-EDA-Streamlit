@@ -49,8 +49,6 @@ with my_expander_2:
 *Please note this is a final group assignment for Python 2 course by Daniel Garcia Hernandez at IE School of Science and Technology*
     """
 
+sidebar = st.sidebar
 with sidebar:
-    st.sidebar.title("Navigation")
-    selection = st.sidebar.radio("Go to", list(PAGES.keys()))
-    page = PAGES[selection]
-    page.app()
+    st.image("pics/ielogo.png", use_column_width=True)

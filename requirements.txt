@@ -1,6 +1,6 @@
 streamlit
 sys
-matplotlib.pyplot
+matplotlib
 seaborn
 pandas
 streamlit_toggle

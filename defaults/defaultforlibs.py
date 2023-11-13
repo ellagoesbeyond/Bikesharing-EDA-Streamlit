@@ -23,7 +23,7 @@ def add_logo():
                 background-image: url(https://static.thenounproject.com/png/410860-200.png);
                 background-repeat: no-repeat;
                 padding-top: 120px;
-                background-position: 10px 10px;
+                background-position: 30px 30px;
             }
             [data-testid="stSidebarNav"]::before {
                 content: "";

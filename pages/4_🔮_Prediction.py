@@ -34,8 +34,9 @@ from scripts.model_registered_user import registered_model
 
 st.title("Joined Model Prediction")
 final_df = pd.read_csv("data/bike_sharing_output.csv")
+plt.figure(figsize=(35, 10))
 sns.lineplot (data=final_df, x="dteday", y="total_pred_lightgbm")
-st.pyplot()
+st.pyplot(plt)
 st.line_chart (final_df[["total_pred_lightgbm"]])
 
 tab1, tab2 = st.tabs(["Try it out!"])

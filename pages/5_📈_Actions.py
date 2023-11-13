@@ -1,8 +1,9 @@
 
 # Autor: Elisabth Oeljeklaus
 # Date: 2023-11-08
-import streamlit as st
-
+import streamlit as st#
+from defaults.defaultforlibs import add_logo
+add_logo()
 # Function to display short-term initiatives
 def short_term_initiatives():
     st.header('Short-Term Initiatives')

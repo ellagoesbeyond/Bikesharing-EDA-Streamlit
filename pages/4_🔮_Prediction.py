@@ -30,8 +30,8 @@ from scripts.model_casual_user import casual_model
 
 sys.path.append ('scripts/model_registered_user.py')
 from scripts.model_registered_user import registered_model
-
-
+from defaults.defaultforlibs import add_logo
+add_logo()
 st.title("Joined Model Prediction")
 final_df = pd.read_csv("data/bike_sharing_output.csv")
 plt.figure(figsize=(35, 10))

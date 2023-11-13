@@ -28,6 +28,8 @@ from scripts.model_casual_user import casual_model
 
 sys.path.append ('scripts/model_registered_user.py')
 from scripts.model_registered_user import registered_model
+from defaults.defaultforlibs import add_logo
+add_logo()
 # Title
 st.title("Modelling")
 st.subheader("Overview ⚗️ ")

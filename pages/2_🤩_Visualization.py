@@ -16,7 +16,8 @@ from scripts.pipeline_df_for_streamlit import preped_data
 
 sys.path.append ('defaults/defaultforlibs.py')
 from defaults.defaultforlibs import default_plt
-
+from defaults.defaultforlibs import add_logo
+add_logo()
 # defaults for plots
 colors=default_plt()
 

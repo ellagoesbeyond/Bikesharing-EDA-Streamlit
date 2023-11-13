@@ -16,7 +16,8 @@ from defaults.defaultforlibs import default_plt
 
 import streamlit as st
 import pandas as pd
-
+from defaults.defaultforlibs import add_logo
+add_logo()
 # defaults for plots
 default_plt()
 df= preped_data()

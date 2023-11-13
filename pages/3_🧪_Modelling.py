@@ -214,15 +214,7 @@ if target_options == "Registered Users":
     st.image("pics/overview_registered_model_pipeline.png")
 
     st.divider()
-    mulit="""
-    **TRAIN** Dates where: \n
-    - Start: 2011-01-01 \n
-    - End: 2012-05-28 \n
-    **TEST** Dates where: \n
-    - Start: 2012-05-29 \n
-    - End: 2012-12-31 \n
-    """
-    st.markdown(mulit)
+    
     # Print metrics
     st.subheader("Metrics")
     st.write("The following are the metrics for the casual users LightGBM model!")
@@ -237,7 +229,7 @@ if target_options == "Registered Users":
         - Start: 2011-01-01 \n
         - End: 2012-05-28 \n
         """
-    st.markdown(mulit)
+        st.markdown(mulit)
     with col2:
         st.write("Test Scores")
         st.write(f"RMSE: {round(test_scores['RMSE'],2)}")

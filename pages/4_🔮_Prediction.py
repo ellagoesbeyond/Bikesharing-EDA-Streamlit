@@ -157,7 +157,7 @@ with tab1:
                    
         with col2:
             st.write("Predicted Demand REGISTERED Users:")
-            if !=on:
+            if on:
                 user_input['lag_2_casual']=154.791238 # to account for weekly seasonality
                 user_input['lag_1_registered']=154.793737	 # to account for daily seasonality
                 user_input['lag_2_registered']=154.791238	# to account for weekly seasonality

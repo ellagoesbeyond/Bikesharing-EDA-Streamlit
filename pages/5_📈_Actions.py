@@ -62,7 +62,6 @@ def notes():
         st.write('Your notes have been saved!')
 
 def actions():
-    st.header('Summary of Actions')
     multi =("""
     # Business Insights on Bike Usage Patterns
 
@@ -110,11 +109,11 @@ def main():
 
     with tab1:
         actions()
-    with tab1:
-        short_term_initiatives()
     with tab2:
-        long_term_initiatives()
+        short_term_initiatives()
     with tab3:
+        long_term_initiatives()
+    with tab4:
         notes()
 
 main()

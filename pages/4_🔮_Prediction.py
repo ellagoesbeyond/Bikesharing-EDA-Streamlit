@@ -40,7 +40,7 @@ tick_spacing = 100
 plt.xticks(final_df['dteday'][::tick_spacing], rotation=45)
 st.pyplot(plt)
 
-tab1, tab2 = st.tabs(["Try it out!",""])
+tab1, tab2 = st.tabs(["Try it out!", "Model Details"])
  
 with tab1: 
     st.header("Predict the hourly demand of bikes")
@@ -56,7 +56,7 @@ with tab1:
     st.divider()
     st.write("Seasonal Influence ")
     # Add input boxes for categorical or discrete values
-    weekday = st.selectbox('Day of the Week', options = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], value = 'Monday')
+    weekday = st.selectbox('Day of the Week', options = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
     mnth = st.slider('Month', min_value=0, max_value=12, value=3, step=1)
     hours = st.slider('Hour of the Day', min_value=0, max_value=23, value=9, step=1)
     season = st.selectbox('Season', options=['Spring', 'Summer', 'Fall', 'Winter'])

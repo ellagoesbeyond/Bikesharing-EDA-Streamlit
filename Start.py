@@ -2,11 +2,8 @@ import streamlit as st
 from defaults.defaultforlibs import add_logo
 
 add_logo()
-st.set_page_config(
-    page_title="Washington D.C Bike Sharing",
-    page_icon="bicycle",
-)
 
+st.title("Washington D.C Bike Sharing")
 st.write("# Welcome to Group 6 Analysis 👋🚲")
 st.image("pics/header.jpg", use_column_width=True)
 

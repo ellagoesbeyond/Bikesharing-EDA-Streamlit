@@ -8,7 +8,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 import plotly.subplots as sp
 import sys
-import  streamlit_toggle as tog
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np

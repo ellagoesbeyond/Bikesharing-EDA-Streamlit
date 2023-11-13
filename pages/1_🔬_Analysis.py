@@ -8,11 +8,11 @@ import seaborn as sns
 import plotly as px
 import sys
 
-sys.path.append('02/group06/pipeline_df_for_streamlit.py')  
-from pipeline_df_for_streamlit import preped_data
+sys.path.append('scripts/pipeline_df_for_streamlit.py')  
+from scripts.pipeline_df_for_streamlit import preped_data
 
-sys.path.append ('02/group06/defaultforlibs.py')
-from defaultforlibs import default_plt
+sys.path.append ('defaults/defaultforlibs.py')
+from defaults.defaultforlibs import default_plt
 
 import streamlit as st
 import pandas as pd

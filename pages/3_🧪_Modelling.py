@@ -156,7 +156,7 @@ if target_options == "Casual Users":
     #show picture of the model pipeline 
     st.subheader("Pipeline")
     st.write("This is the pipeline for the casual users LightGBM model!")
-    st.image("overview_casual_model_pipeline.png")
+    st.image("pics/overview_casual_model_pipeline.png")
 
     st.divider()
     # Print metrics
@@ -211,7 +211,7 @@ if target_options == "Registered Users":
     #show picture of the model pipeline 
     st.subheader("Pipeline")
     st.write("This is the pipeline for the casual users LightGBM model!")
-    st.image("overview_registered_model_pipeline.png")
+    st.image("pics/overview_registered_model_pipeline.png")
 
     st.divider()
     mulit="""

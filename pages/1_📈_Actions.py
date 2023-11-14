@@ -75,20 +75,20 @@ def actions():
     ### Registered User Pattern: "Get to Work Users"
     - **Primary Usage**: During weekdays, less sensitive to weather.
     - **Demand Peak**: Morning and afternoon (start/end of working day).
-    - **Note**: In very bad weather (heavy rain, ice, thunderstorm, mist, snow, fog), usage drops significantly, with most users being registered ones.
-
+    - **Note**: When the weather worsens, both casual and registered bike users significantly reduce their usage. However, it's observed that in conditions of heavy precipitation, those who continue to use bikes are more likely to be registered users.
+    ----------------------
     ## Demand Overview
-    - Over a two-year period, **~70%** of daily demand comes from registered users.
+    - Over a two-year period, **~80%** of daily demand comes from registered users.
     - Year-over-Year (YoY) demand increase is higher for registered users compared to casual users.
-
-    ## Advantages of Data/Insights
+    ----------------------
+    ## Strategic Advantages
 
     1. **Boost Customer Satisfaction**: Anticipating demand peaks to adjust bike supply, enhancing satisfaction and loyalty.
     2. **Operational Costs**: Optimizing bike supply to match demand, reducing excess supply costs.
     3. **Bike Availability**: Predicting demand fluctuations to schedule optimal times for bike redistribution and maintenance.
     4. **Demand Boosting**: Offering discounts during low demand periods (nights, cold weather) to attract price-sensitive customers.
     5. **Alternative Revenue Streams**: Renting out excess bikes in low demand periods (winter, night) to delivery services.
-
+    -----------------------
     ## Considerations Beyond Current Analysis
 
     - **Bike Location**: Lack of location data could lead to unavailability in certain city regions, affecting revenue.
@@ -103,10 +103,10 @@ def actions():
 def main():
     st.title("Actions to take! 🫵🏽")
     
-    st.subheader("We have divided them into short-term and long-term initiatives")
+    st.write("We have divided them into short-term and long-term initiatives")
     st.write("Feel free to take a look at our notes and write your own.")
     
-    tab1, tab2, tab3,tab4= st.tabs(["Summary of Actions",'Short-Term Initiatives 🪄', 'Long-Term Initiatives ⏳',"Notes 📝"])
+    tab1, tab2, tab3,tab4= st.tabs(["Summary of Actions 🫱🏽‍🫲🏼",'Short-Term Initiatives 🪄', 'Long-Term Initiatives ⏳',"Notes 📝"])
 
     with tab1:
         actions()

@@ -33,12 +33,12 @@ from scripts.model_registered_user import registered_model
 from defaults.defaultforlibs import add_logo
 add_logo()
 st.title("Joined Model Prediction")
-final_df = pd.read_csv("data/bike_sharing_output.csv")
-plt.figure(figsize=(35, 10))
-sns.lineplot (data=final_df, x="dteday", y="total_pred_lightgbm", label="Predicted Total Demand")
+#final_df = pd.read_csv("data/bike_sharing_output.csv")
+#plt.figure(figsize=(35, 10))
+#sns.lineplot (data=final_df, x="dteday", y="total_pred_lightgbm", label="Predicted Total Demand")
 #tick_spacing = 100
 #plt.xticks(final_df['dteday'][::tick_spacing], rotation=45)
-st.pyplot(plt)
+#st.pyplot(plt)
 
 tab1, tab2 = st.tabs(["Try it out!", "Model Details"])
  

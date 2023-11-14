@@ -126,8 +126,8 @@ if target_options == "First Analysis":
     casual_mean = df['casual'].mean()
     registered_mean = df['registered'].mean()
     # print results
-    st.markdown(f"Average amount of bike used per casual user: **{int(casual_mean)}**")
-    st.markdown(f"Average amount of bike used per registered user: **{int(registered_mean)}**")
+    st.markdown(f"Average HOURLY Bike Use per Casual User: **{int(casual_mean)}**")
+    st.markdown(f"Average HOURLY Bike Use per Registered User: **{int(registered_mean)}**")
 
     st.divider()
     # Donut Chart count of registered and casual users in dataset
@@ -135,7 +135,7 @@ if target_options == "First Analysis":
     st.plotly_chart(fig)
 
     st.divider()
-
+    st.write("Missing Entries/Data points in Dataset")
     plt.figure()
     plt.plot(df['datetime'], df['cnt'])
     # Add missing values as points
@@ -257,8 +257,30 @@ if target_options == "Correlation Analysis":
     st.subheader("Summary of Correlation Analysis")
     multi= ("""
     **SUMMARY**:
-    1. MISSING !!!""")
+        
+    1. `Casual users`: Most influence of bike usage has the **temperature**.
+    2. `Registered users`: Most influence of bike usage has the **hour of the day**""")
+    st.markdown(multi)
+    expander3 =st.expander("Variable Importance")
+    with expander3:
+        st.write("The following are the variable importance plots for each user group")
+        st.write("This is without feature engineering")
+        # Variable Importances of target=casual
+        data = preped_data()
+        correlation_matrix= data.corr()
+        variable_importance=pd.DataFrame()
+        target='casual'
+        variable_importance[target]=abs(correlation_matrix.loc[~correlation_matrix.index.isin([target,'registered','cnt']),target]).sort_values(ascending=False)
 
+        # Variable Importances of target=registered
+        target='registered'
+        variable_importance[target]=abs(correlation_matrix.loc[~correlation_matrix.index.isin([target,'casual','cnt']),target]).sort_values(ascending=False)
+        # joint variable importance
+        sorted_df = variable_importance.sort_values(by=['casual', 'registered'], ascending=False)
+        st.dataframe(sorted_df.loc[:, ['casual', 'registered']])
+        #st.dataframe(pd.DataFrame(variable_importance.loc[:,['casual','registered']]))
+
+  
 
 
 

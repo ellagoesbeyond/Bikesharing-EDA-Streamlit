@@ -105,25 +105,7 @@ if target_options == "Preprocessing Steps":
             ]'''
         st.code(code, language='python')
 
-    expander3 =st.expander("Variable Importance")
-    with expander3:
-        st.write("The following are the variable importance plots for each user group")
-        st.write("This is without feature engineering")
-        # Variable Importances of target=casual
-        data = preped_data()
-        correlation_matrix= data.corr()
-        variable_importance=pd.DataFrame()
-        target='casual'
-        variable_importance[target]=abs(correlation_matrix.loc[~correlation_matrix.index.isin([target,'registered','cnt']),target]).sort_values(ascending=False)
-
-        # Variable Importances of target=registered
-        target='registered'
-        variable_importance[target]=abs(correlation_matrix.loc[~correlation_matrix.index.isin([target,'casual','cnt']),target]).sort_values(ascending=False)
-        # joint variable importance
-        sorted_df = variable_importance.sort_values(by=['casual', 'registered'], ascending=False)
-        st.dataframe(sorted_df.loc[:, ['casual', 'registered']])
-        #st.dataframe(pd.DataFrame(variable_importance.loc[:,['casual','registered']]))
-
+    
     expander2 =st.expander("Feature Engineering")
     with expander2:
         ## Feature Engineering Summary

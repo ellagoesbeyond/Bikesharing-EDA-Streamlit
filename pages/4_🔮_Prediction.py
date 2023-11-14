@@ -65,20 +65,20 @@ with tab1:
     st.divider()    
     st.subheader("Other Influences")
     on=st.toggle("Add features manually")
-    if on:
-        expander = st.expander("Add features to account for seasonality")
-        with expander:
-                st.write ("Features for casual users")
-                lag_1_casual = st.number_input("Lag 1 casual")
-                lag_2_casual = st.number_input("Lag 2 casual")
-                lag_week_casual = st.number_input("Lag week casual")
-                lag_24_casual = st.number_input("Lag 24 casual")
-                st.write ("Features for registered users")
-                lag_1_registered = st.number_input("Lag 1 registered")
-                lag_2_registered = st.number_input("Lag 2 registered")
-                lag_week_registered = st.number_input("Lag week registered")
-                lag_24_registered = st.number_input("Lag 24 registered")
-                new_columns=pd.DataFrame({"lag_1_casual":lag_1_casual,"lag_2_casual":lag_2_casual,"lag_week_casual":lag_week_casual,"lag_24_casual":lag_24_casual,"lag_1_registered":lag_1_registered,"lag_2_registered":lag_2_registered,"lag_week_registered":lag_week_registered,"lag_24_registered":lag_24_registered}) 
+
+    expander = st.expander("Add features to account for seasonality")
+    with expander:
+            st.write ("Features for casual users")
+            lag_1_casual = st.number_input("Lag 1 casual")
+            lag_2_casual = st.number_input("Lag 2 casual")
+            lag_week_casual = st.number_input("Lag week casual")
+            lag_24_casual = st.number_input("Lag 24 casual")
+            st.write ("Features for registered users")
+            lag_1_registered = st.number_input("Lag 1 registered")
+            lag_2_registered = st.number_input("Lag 2 registered")
+            lag_week_registered = st.number_input("Lag week registered")
+            lag_24_registered = st.number_input("Lag 24 registered")
+            new_columns=pd.DataFrame({"lag_1_casual":lag_1_casual,"lag_2_casual":lag_2_casual,"lag_week_casual":lag_week_casual,"lag_24_casual":lag_24_casual,"lag_1_registered":lag_1_registered,"lag_2_registered":lag_2_registered,"lag_week_registered":lag_week_registered,"lag_24_registered":lag_24_registered}) 
 
     # Map other categorical variables as needed
     if season =="Spring":

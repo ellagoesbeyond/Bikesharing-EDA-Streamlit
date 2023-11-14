@@ -90,6 +90,9 @@ if target_options == "Overview 📊":
     sns.lineplot(data=df_agg,x='dteday',y='casual',label='casual',color='green',errorbar=None)
     plt.legend()
     st.pyplot(plt)
+    mulit="""
+    General Note: A couple of strong low outliers: e.g. Oct 29 but prob related to hurricane Sandy"""
+    st.markdown(mulit)
     st.divider()
     st.dataframe(df)
 

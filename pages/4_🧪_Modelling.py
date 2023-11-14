@@ -150,8 +150,8 @@ if target_options == "Casual Users":
     with col1:
         st.write("Validation Scores")
         st.write(f"RMSE: {-(round(val_scores['RMSE'],2))}")
-        st.write(f"MAE: {round(val_scores['MAE'],2)}")
-        st.write(f"MAPE: {round(val_scores['MAPE'],2)}")
+        st.write(f"MAE: {-(round(val_scores['MAE'],2))}")
+        st.write(f"MAPE: {-(round(val_scores['MAPE'],2))}")
         st.divider()
         mulit="""
 
@@ -220,9 +220,9 @@ if target_options == "Registered Users":
     col1,col2 =st.columns(2)
     with col1:
         st.write("Validation Scores")
-        st.write(f"RMSE: {round(val_scores['RMSE'],2)}")
-        st.write(f"MAE: {round(val_scores['MAE'],2)}")
-        st.write(f"MAPE: {round(val_scores['MAPE'],2)}")
+        st.write(f"RMSE: {-(round(val_scores['RMSE'],2))}")
+        st.write(f"MAE: {-(round(val_scores['MAE'],2))}")
+        st.write(f"MAPE: {-(round(val_scores['MAPE'],2))}")
         st.divider()
         mulit="""
 

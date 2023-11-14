@@ -28,7 +28,7 @@ from math import sqrt
 sys.path.append('scripts/pipeline_df_for_streamlit.py')  
 from scripts.pipeline_df_for_streamlit import preped_data
 
-sys.path.append ('02/group06/')
+sys.path.append ('scripts/')
 from scripts.important_pipeline import OutlierClipper
 from scripts.important_pipeline import RemoveRedundant
 from scripts.important_pipeline import MinMaxScaler

@@ -43,18 +43,18 @@ def registered_model():
     non_target='casual'
 
     # Based on results of the model we introduce AR(2) to the data and MA(4)
-    data['lag_1_casual']=data[target].shift(1)
-    data['lag_2_casual']=data[target].shift(2)
-    data['lag_1_registered']=data[non_target].shift(1)
-    data['lag_2_registered']=data[non_target].shift(2)
+    data['lag_1_casual']=data[non_target].shift(1)
+    data['lag_2_casual']=data[non_target].shift(2)
+    data['lag_1_registered']=data[target].shift(1)
+    data['lag_2_registered']=data[target].shift(2)
 
 
     data['hour_sin'] = np.sin(2 * np.pi * data['hr'] / 12.0)  # to account for daily seasonality
     data['hour_cos'] = np.cos(2 * np.pi * data['hr'] / 12.0) # to account for daily seasonality
-    data['lag_week_casual']=data[target].shift(24*7)  # to account for weekly seasonality
-    data['lag_24_casual']=data[target].shift(24) # to account for daily seasonality
-    data['lag_week_registered']=data[non_target].shift(24*7)  # to account for weekly seasonality
-    data['lag_24_registered']=data[non_target].shift(24)  # to account for daily seasonality
+    data['lag_week_casual']=data[non_target].shift(24*7)  # to account for weekly seasonality
+    data['lag_24_casual']=data[non_target].shift(24) # to account for daily seasonality
+    data['lag_week_registered']=data[target].shift(24*7)  # to account for weekly seasonality
+    data['lag_24_registered']=data[target].shift(24)  # to account for daily seasonality
 
 
     #data['ma_4']=data[target].rolling(window=4).mean()
@@ -80,7 +80,7 @@ def registered_model():
     # here i want to u the pipline with the following estimators. 
 
     # Load the dictionary from the file
-    with open('models/casual_best_estimator.pkl', 'rb') as file:
+    with open('models/registered_best_estimator.pkl', 'rb') as file:
         pipelines = pickle.load(file)
 
     # Now you can use the pipelines as needed
@@ -97,7 +97,7 @@ def registered_model():
     val_scores['MAPE'] = best_cv_results[best_cv_results['rank_test_RMSE'] == 1]['mean_test_MAPE'].values[0]
     val_scores['MAE'] = best_cv_results[best_cv_results['rank_test_RMSE'] == 1]['mean_test_MAE'].values[0]
 
-
+    #.iloc[data[],"target"]
     test_scores={}
     test_scores['RMSE']=sqrt(MSE(y_test,Y_pred))
     test_scores['MAPE']=MAPE(y_test,Y_pred)

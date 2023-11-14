@@ -141,7 +141,10 @@ with tab1:
         with col1:
             st.write("Predicted Demand CASUAL Users:")
             if on:
-    
+                user_input = pd.concat([user_input,new_columns],axis=1)
+           
+            else:
+                user_input = pd.concat([user_input,new_columns],axis=1)
                 user_input['lag_2_casual']=35.964151 # to account for weekly seasonality
                 user_input['lag_1_registered']=35.964906	 # to account for daily seasonality
                 user_input['lag_2_registered']=35.964151	# to account for weekly seasonality
@@ -151,8 +154,7 @@ with tab1:
                 user_input['lag_24_casual']=35.948173 # to account for daily seasonality
                 user_input['lag_week_registered']=35.890651	# to account for weekly seasonality
                 user_input['lag_24_registered']=35.948173 # to account for daily seasonality
-            else:
-                user_input = pd.concat([user_input,new_columns],axis=1)
+            
             casual_pipeline,dates_train,dates_test,y_train,y_test,Y_pred,val_scores,test_scores=casual_model()
             Y_pred_casual=casual_pipeline.predict(user_input)
                     
@@ -161,6 +163,8 @@ with tab1:
         with col2:
             st.write("Predicted Demand REGISTERED Users:")
             if on:
+                user_input = pd.concat([user_input,new_columns],axis=1)
+            else:
                 user_input['lag_2_casual']=154.791238 # to account for weekly seasonality
                 user_input['lag_1_registered']=154.793737	 # to account for daily seasonality
                 user_input['lag_2_registered']=154.791238	# to account for weekly seasonality
@@ -168,8 +172,7 @@ with tab1:
                 user_input['lag_week_casual']=154.693219 # to account for weekly seasonality
                 user_input['lag_24_casual']=154.742781 # to account for daily seasonality
                 user_input['lag_week_registered']=154.693219	# to account for weekly seasonality                user_input['lag_24_registered']=154.742781 #to account for daily seasonality
-            else:
-                user_input = pd.concat([user_input,new_columns],axis=1)
+            
             registered_pipeline,dates_train,dates_test,y_train,y_test,Y_pred,val_scores,test_scores=registered_model()
             Y_pred_registered=registered_pipeline.predict(user_input)
             st.dataframe(Y_pred_registered)

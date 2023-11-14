@@ -97,7 +97,7 @@ def registered_model():
     val_scores['MAPE'] = best_cv_results[best_cv_results['rank_test_RMSE'] == 1]['mean_test_MAPE'].values[0]
     val_scores['MAE'] = best_cv_results[best_cv_results['rank_test_RMSE'] == 1]['mean_test_MAE'].values[0]
 
-    #.iloc[data[],"target"]
+    
     test_scores={}
     test_scores['RMSE']=sqrt(MSE(y_test,Y_pred))
     test_scores['MAPE']=MAPE(y_test,Y_pred)

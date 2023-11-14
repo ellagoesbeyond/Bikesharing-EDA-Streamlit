@@ -194,11 +194,11 @@ with tab2:
     st.header("Total Demand Prediction")
     final_df = pd.read_csv("data/bike_sharing_output.csv")
 
-    plt.figure(figsize=(35, 10))
-    sns.lineplot(x="dteday",y= "cnt", color='seagreen', label='actual')
-    sns.lineplot(x="dteday",y= "total_pred_lightgbm", color='darksalmon',linestyle='dashed', label='Forecast')
-    plt.title('Forecast period acutal vs. error')
-    st.pyplot(plt)
+    #plt.figure(figsize=(35, 10))
+    #sns.lineplot(x="dteday",y= "cnt", color='seagreen', label='actual')
+    #sns.lineplot(x="dteday",y= "total_pred_lightgbm", color='darksalmon',linestyle='dashed', label='Forecast')
+    #plt.title('Forecast period acutal vs. error')
+    #st.pyplot(plt)
     plt.figure(figsize=(35, 10))
     sns.lineplot (data=final_df, x="dteday", y="total_pred_lightgbm", label="Predicted Total Demand")
     tick_spacing = 100

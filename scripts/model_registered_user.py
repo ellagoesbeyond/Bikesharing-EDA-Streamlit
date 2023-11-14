@@ -80,7 +80,7 @@ def registered_model():
     # here i want to u the pipline with the following estimators. 
 
     # Load the dictionary from the file
-    with open('models/registered_best_estimator.pkl', 'rb') as file:
+    with open('models/casual_best_estimator.pkl', 'rb') as file:
         pipelines = pickle.load(file)
 
     # Now you can use the pipelines as needed

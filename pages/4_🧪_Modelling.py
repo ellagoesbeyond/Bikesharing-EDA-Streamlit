@@ -205,7 +205,7 @@ if target_options == "Registered Users":
 
     st.header("Registered Users")
     registered_pipeline,dates_train,dates_test,y_train,y_test,Y_pred,val_scores,test_scores=registered_model()
-    test_scores_reg=test_scores
+    #test_scores_reg=test_scores
     multi=("""We tried out different models for the casual users. The best scores were achieved with the **LightGBM** model.""")
     st.markdown(multi)
     #show picture of the model pipeline 
@@ -235,9 +235,9 @@ if target_options == "Registered Users":
         st.markdown(mulit)
     with col2:
         st.write("Test Scores")
-        st.write(f"RMSE: {round(test_scores_reg['RMSE'],2)}")
-        st.write(f"MAE: {round(test_scores_reg['MAE'],2)}")
-        st.write(f"MAPE: {round(test_scores_reg['MAPE'],2)}")
+        st.write(f"RMSE: {round(test_scores['RMSE'],2)}")
+        st.write(f"MAE: {round(test_scores['MAE'],2)}")
+        st.write(f"MAPE: {round(test_scores['MAPE'],2)}")
         st.divider()
         mulit="""
 

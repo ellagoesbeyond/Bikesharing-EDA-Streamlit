@@ -45,8 +45,8 @@ tab1, tab2 = st.tabs(["Try it out!", "Model Details"])
 with tab1: 
     st.header("Predict the hourly demand of bikes")
 
-    st.subheader("Input Parameters for Prediction")
-    st.write("Weather Influence ")
+    st.header("Input Parameters for Prediction")
+    st.subheader("Weather Influence ")
     # Add sliders for numerical inputs
     temp = st.slider('Temperature (in Celsius)', min_value=-10.0, max_value=40.0, value=20.0, step=0.5)
     humidity = st.slider('Humidity (in %)', min_value=0, max_value=100, value=50)
@@ -54,7 +54,7 @@ with tab1:
     weather = st.selectbox('Weather condition', options=['Clear', 'Mist', 'Light Rain/Snow', 'Heavy Rain/Snow'])
     
     st.divider()
-    st.write("Seasonal Influence ")
+    st.subheader("Seasonal Influence ")
     # Add input boxes for categorical or discrete values
     weekday = st.selectbox('Day of the Week', options = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
     mnth = st.slider('Month', min_value=0, max_value=12, value=3, step=1)
@@ -63,7 +63,7 @@ with tab1:
     holiday = st.selectbox('Is it a holiday?', options=['Yes', 'No'])
     
     st.divider()    
-    st.write("Other Influences")
+    st.subheader("Other Influences")
     on=st.toggle("Add features manually")
     if on:
         expander = st.expander("Add features to account for seasonality")
@@ -127,7 +127,7 @@ with tab1:
         data=[[temp, humidity, windspeed, season, holiday, workingday, weather,hours,weekday, mnth]],
         columns=['temp', 'hum', 'windspeed', 'season', 'holiday', 'workingday', 'weathersit',"hr","weekday","mnth"]
     )
-    
+
     # Button to make prediction
     if st.button('Predict Demand'):
         st.spinner(text='Prediction progress...')
@@ -175,7 +175,7 @@ with tab1:
             st.dataframe(Y_pred_registered)
 
         st.divider()
-        st.write("Predicted Demand Total Users:")
+        st.subheader("Predicted Demand Total Users:")
         st.write(Y_pred_casual+Y_pred_registered)           
 
 

@@ -203,8 +203,8 @@ with tab2:
     plt.figure(figsize=(35, 10))
     sns.lineplot (data=final_df, x="dteday", y="cnt", label="Actual Total Demand")
     sns.lineplot (data=final_df, x="dteday", y="total_pred_lightgbm", label="Predicted Total Demand")
-    tick_spacing = 100
-    plt.xticks(final_df['dteday'][::tick_spacing], rotation=45)
+    #tick_spacing = 100
+    #plt.xticks(final_df['dteday'][::tick_spacing], rotation=45)
     st.pyplot(plt)
 
 

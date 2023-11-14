@@ -78,7 +78,7 @@ with tab1:
                 lag_2_registered = st.number_input("Lag 2 registered")
                 lag_week_registered = st.number_input("Lag week registered")
                 lag_24_registered = st.number_input("Lag 24 registered")
-                new_columns=pd.DataFramr({"lag_1_casual":lag_1_casual,"lag_2_casual":lag_2_casual,"lag_week_casual":lag_week_casual,"lag_24_casual":lag_24_casual,"lag_1_registered":lag_1_registered,"lag_2_registered":lag_2_registered,"lag_week_registered":lag_week_registered,"lag_24_registered":lag_24_registered}) 
+                new_columns=pd.DataFrame({"lag_1_casual":lag_1_casual,"lag_2_casual":lag_2_casual,"lag_week_casual":lag_week_casual,"lag_24_casual":lag_24_casual,"lag_1_registered":lag_1_registered,"lag_2_registered":lag_2_registered,"lag_week_registered":lag_week_registered,"lag_24_registered":lag_24_registered}) 
 
     # Map other categorical variables as needed
     if season =="Spring":

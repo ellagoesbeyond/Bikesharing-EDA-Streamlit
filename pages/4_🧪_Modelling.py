@@ -216,7 +216,7 @@ if target_options == "Registered Users":
     
     # Print metrics
     st.subheader("Metrics")
-    st.write("The following are the metrics for the casual users LightGBM model!")
+    st.write("The following are the metrics for the Registered users LightGBM model!")
     col1,col2 =st.columns(2)
     with col1:
         st.write("Validation Scores")

@@ -98,7 +98,7 @@ if target_options == "First Analysis":
     #  2. KPI's (Amount of Row, Consitency of Data, Amount of Columns, Amount of Null Values, Amount of Duplicates)
     st.header("First Analysis")  
     st.subheader("Here you can see first analysis we got of the data")
-    st.divider()
+    
     # average amount of bike used per user group 
     st.markdown(f"""Amount of Duplicates:   **{df.duplicated().sum()}**""")
     # Consitency of Data
@@ -135,8 +135,8 @@ if target_options == "First Analysis":
     st.plotly_chart(fig)
 
     st.divider()
-    st.write("Missing Entries/Data points in Dataset")
     plt.figure()
+    plt.title('Missing Entries/Data points in Dataset')
     plt.plot(df['datetime'], df['cnt'])
     # Add missing values as points
     for date in missing:

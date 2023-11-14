@@ -252,16 +252,16 @@ with tab2:
     st.header("What are the differences between our users?")
     st.subheader("Casual Users")
     multi = """
-    - Peak in the afternoon, likely indicating tourists or those using the service for leisure.
-    - Peak during weekends, attracting various people, mostly for leisure activities.
-    - Use the bike-sharing service more on weekends and holidays."""
+    - Peak in the **afternoon**, likely indicating tourists or those using the service for leisure.
+    - Peak during **weekends**, attracting various people, mostly for leisure activities.
+    - Use the bike-sharing service more on **weekends and holidays**."""
     st.markdown(multi)
     st.divider()
     st.subheader("Registered Users")
     multi ="""
-    - Peak in the morning and evening, likely indicating commuters using the service for work or school.
-    - Peak during the week, suggesting a consistent daily routine, like commuting to work.
+    - Peak in the **morning and evening**, likely indicating commuters using the service for work or school.
+    - Peak **during the week**, suggesting a consistent daily routine, like commuting to work.
     - Notably, use the bikes slightly less in July compared to other months from June to September.
-    - Use the bike-sharing service more on working days.          
+    - Use the bike-sharing service more on **working days**.          
     """
     st.markdown(multi)

@@ -122,6 +122,8 @@ with tab1:
                     go.Bar(x=data['holiday'], y=data[metric], name=metric, marker_color=colors[metric]),
                     row=1, col=1
                 )
+                fig.update_xaxes(type='category', tickmode='array', tickvals=[0, 1], ticktext=['Non-Holiday', 'Holiday'])
+            
 
             # Plot Working Day Usage
             for metric in selected_metrics:
@@ -129,7 +131,7 @@ with tab1:
                     go.Bar(x=data['workingday'], y=data[metric], name=metric, marker_color=colors[metric]),
                     row=1, col=2
                 )
-            fig.update_xaxes(type='category', tickmode='array', tickvals=[0, 1], ticktext=['Non-Holiday', 'Holiday'])
+                fig.update_xaxes(type='category', tickmode='array', tickvals=[0, 1], ticktext=['Non-Working', 'Working Day'])
             fig.update_layout(legend_title_text='User Groups')
             st.plotly_chart(fig)
         

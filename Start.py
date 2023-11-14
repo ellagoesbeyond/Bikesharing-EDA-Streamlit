@@ -20,9 +20,9 @@ st.markdown(
     ### Table of Contents
     1. [Data Exploration](https://bikesharing-group06.streamlit.app/Analysis)
     2. [Data Visualization](https://bikesharing-group06.streamlit.app/Visualization)
-    3. [Data Modeling](https://bikesharing-group06.streamlit.app/Modeling)
+    3. [Data Modelling](https://bikesharing-group06.streamlit.app/Modelling)
     4. [Data Prediction](https://bikesharing-group06.streamlit.app/Prediction)
-    5. [Data Conclusion](https://bikesharing-group06.streamlit.app/Conclusion)
+    5. [Data Conclusion](https://bikesharing-group06.streamlit.app/Actions)
     """
    
 )

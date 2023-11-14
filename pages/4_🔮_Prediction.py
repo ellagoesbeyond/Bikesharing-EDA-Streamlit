@@ -165,8 +165,8 @@ with tab1:
             
             casual_pipeline,dates_train,dates_test,y_train,y_test,Y_pred,val_scores,test_scores=casual_model()
             Y_pred_casual=casual_pipeline.predict(user_input)
-                    
-            st.dataframe(round(Y_pred_casual,0))
+            st.write(round(Y_pred_casual,0))    
+            st.dataframe(Y_pred_casual)
                    
         with col2:
             st.write("Predicted Demand REGISTERED Users:")

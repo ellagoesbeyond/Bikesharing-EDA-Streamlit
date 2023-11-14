@@ -195,7 +195,7 @@ with tab2:
     final_df = pd.read_csv("data/bike_sharing_output.csv")
 
     #only dteday starting from 2012-05-29
-    days=final_df.iloc[final_df['datetime']>='2012-05-09',['dteday','total_pred_lightgbm','cnt']]
+    days=final_df.loc[final_df['datetime']>='2012-05-09',['dteday','total_pred_lightgbm','cnt']]
     
     plt.figure(figsize=(35, 10))
     sns.lineplot (data=days, x="dteday", y="cnt", label="Actual Total Demand")

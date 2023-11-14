@@ -152,6 +152,7 @@ if target_options == "Casual Users":
         st.write(f"RMSE: {round(val_scores['RMSE'],2)}")
         st.write(f"MAE: {round(val_scores['MAE'],2)}")
         st.write(f"MAPE: {round(val_scores['MAPE'],2)}")
+        st.divider()
         mulit="""
 
 
@@ -160,11 +161,13 @@ if target_options == "Casual Users":
         - End: 2012-05-28 \n
         """
         st.markdown(mulit)
+ 
     with col2:
         st.write("Test Scores")
         st.write(f"RMSE: {round(test_scores['RMSE'],2)}")
         st.write(f"MAE: {round(test_scores['MAE'],2)}")
         st.write(f"MAPE: {round(test_scores['MAPE'],2)}")
+        st.divider()
         mulit="""
 
 
@@ -220,6 +223,7 @@ if target_options == "Registered Users":
         st.write(f"RMSE: {round(val_scores['RMSE'],2)}")
         st.write(f"MAE: {round(val_scores['MAE'],2)}")
         st.write(f"MAPE: {round(val_scores['MAPE'],2)}")
+        st.divider()
         mulit="""
 
 
@@ -233,6 +237,7 @@ if target_options == "Registered Users":
         st.write(f"RMSE: {round(test_scores['RMSE'],2)}")
         st.write(f"MAE: {round(test_scores['MAE'],2)}")
         st.write(f"MAPE: {round(test_scores['MAPE'],2)}")
+        st.divider()
         mulit="""
 
 

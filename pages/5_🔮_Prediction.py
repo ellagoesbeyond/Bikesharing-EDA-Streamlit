@@ -196,7 +196,7 @@ with tab2:
 
     plt.figure(figsize=(35, 10))
     sns.lineplot(x="dteday",y= "cnt", color='seagreen', label='actual')
-    sns.lineplot(x="dteday",,y= "total_pred_lightgbm", color='darksalmon',linestyle='dashed', label='Forecast')
+    sns.lineplot(x="dteday",y= "total_pred_lightgbm", color='darksalmon',linestyle='dashed', label='Forecast')
     plt.title('Forecast period acutal vs. error')
     st.pyplot(plt)
     plt.figure(figsize=(35, 10))

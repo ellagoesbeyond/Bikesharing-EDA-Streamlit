@@ -85,7 +85,7 @@ def registered_model():
 
     # Now you can use the pipelines as needed
     # For example, to use the LightGBM pipeline:
-    registered_pipeline = pipelines['lightgbm']
+    registered_pipeline = pipelines['lightgbm_2']
 
     # use the lightgbm pipeline to predict
     Y_pred = registered_pipeline.predict(X_test)

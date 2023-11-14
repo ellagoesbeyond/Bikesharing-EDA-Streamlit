@@ -127,7 +127,7 @@ with tab1:
         data=[[temp, humidity, windspeed, season, holiday, workingday, weather,hours,weekday, mnth]],
         columns=['temp', 'hum', 'windspeed', 'season', 'holiday', 'workingday', 'weathersit',"hr","weekday","mnth"]
     )
-    target=st.multiselect("Select the hour of the day", options=["Casual", "Registered"])
+    
     # Button to make prediction
     if st.button('Predict Demand'):
         st.spinner(text='Prediction progress...')

@@ -177,21 +177,25 @@ if target_options == "Casual Users":
     st.divider()
     
     st.subheader("Forecast period acutal vs. error for Casual Users")
+    st.image("pics/casual_forecast.jpeg")
     #plot
-    plt.figure(figsize=(35, 10))
-    plt.title(f"LIGHTXBG Forecast period acutal vs. error")
-    sns.lineplot(x=dates_test,y= y_test, color='seagreen', label='actual')
-    sns.lineplot(x=dates_test, y=Y_pred, color='darksalmon', linestyle='dashed', label='Forecast')    
-    plt.title(f"LIGHTXBG Forecast period acutal vs. error")
-    st.pyplot(plt)
+    #plt.figure(figsize=(35, 10))
+    #plt.title(f"LIGHTXBG Forecast period acutal vs. error")
+    #sns.lineplot(x=dates_test,y= y_test, color='seagreen', label='actual')
+    #sns.lineplot(x=dates_test, y=Y_pred, color='darksalmon', linestyle='dashed', label='Forecast')    
+    #plt.title(f"LIGHTXBG Forecast period acutal vs. error")
+    #st.pyplot(plt)
 
+    st.divider()
+    st.subheader("Historical Bike Usage and Forecast for Casual Users")
+    st.image("pics/casual_wholedata_Forecast.jpeg"")
     # Plot historical data (train data)
-    plt.figure(figsize=(35, 10))
-    sns.lineplot(x=dates_train,y= y_train, label='Observed', color='seagreen')
+    #plt.figure(figsize=(35, 10))
+    #sns.lineplot(x=dates_train,y= y_train, label='Observed', color='seagreen')
     # plot actual
-    sns.lineplot(x=dates_test,y= y_test, color='seagreen', label='actual')
-    sns.lineplot(x=dates_test, y=Y_pred, color='darksalmon', linestyle='dashed', label='Forecast')   
-    st.pyplot(plt)
+    #sns.lineplot(x=dates_test,y= y_test, color='seagreen', label='actual')
+    #sns.lineplot(x=dates_test, y=Y_pred, color='darksalmon', linestyle='dashed', label='Forecast')   
+    #st.pyplot(plt)
 
 
 if target_options == "Registered Users":
@@ -242,22 +246,22 @@ if target_options == "Registered Users":
     
     #plot
     st.subheader("Forecast period acutal vs. error for Registered  Users")
-    plt.figure(figsize=(35, 10))
-    plt.title(f"LIGHTXBG Forecast period acutal vs. error")
-    sns.lineplot(x=dates_test, y=Y_pred, color='darksalmon', linestyle='dashed', label='Forecast')
+    #plt.figure(figsize=(35, 10))
+    #plt.title(f"LIGHTXBG Forecast period acutal vs. error")
+    #sns.lineplot(x=dates_test, y=Y_pred, color='darksalmon', linestyle='dashed', label='Forecast')
 
-    sns.lineplot(x=dates_test,y= y_test, color='seagreen', label='actual')
-    
+    #sns.lineplot(x=dates_test,y= y_test, color='seagreen', label='actual')
+    st.image("pics/registered_forecast.jpeg")
     st.divider()
-    
-    st.pyplot(plt)
-
+    st.subheader("Historical Bike Usage and Forecast for Registered Users")
+    #st.pyplot(plt)
+    st.image("pics/registered_wholedata_Forecast.jpeg")
     # Plot historical data (train data)
-    plt.figure(figsize=(35, 10))
-    sns.lineplot(x=dates_train,y= y_train, label='Observed', color='seagreen')
+    #plt.figure(figsize=(35, 10))
+    #sns.lineplot(x=dates_train,y= y_train, label='Observed', color='seagreen')
     # plot actual
-    sns.lineplot(x=dates_test,y= y_test, color='seagreen', label='actual')
-    sns.lineplot(x=dates_test, y=Y_pred, color='darksalmon', linestyle='dashed', label='Forecast')
-    st.pyplot(plt)
+    #sns.lineplot(x=dates_test,y= y_test, color='seagreen', label='actual')
+    #sns.lineplot(x=dates_test, y=Y_pred, color='darksalmon', linestyle='dashed', label='Forecast')
+    #st.pyplot(plt)
 
 

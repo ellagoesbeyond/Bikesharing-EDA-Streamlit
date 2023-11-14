@@ -68,17 +68,16 @@ with tab1:
     if on:
         expander = st.expander("Add features to account for seasonality")
         with expander:
-                lag_1_casual=st.number_input("Lag 1 casual",value=35.964906)
                 st.write ("Features for casual users")
-                lag_1_casual = st.number_input("Lag 1 casual", value=35.964906)
-                lag_2_casual = st.number_input("Lag 2 casual", value=35.964151)
-                lag_week_casual = st.number_input("Lag week casual", value=35.890651)
-                lag_24_casual = st.number_input("Lag 24 casual", value=35.948173)
+                lag_1_casual = st.number_input("Lag 1 casual")
+                lag_2_casual = st.number_input("Lag 2 casual")
+                lag_week_casual = st.number_input("Lag week casual")
+                lag_24_casual = st.number_input("Lag 24 casual")
                 st.write ("Features for registered users")
-                lag_1_registered = st.number_input("Lag 1 registered", value=154.793737)
-                lag_2_registered = st.number_input("Lag 2 registered", value=154.791238)
-                lag_week_registered = st.number_input("Lag week registered", value=154.693219)
-                lag_24_registered = st.number_input("Lag 24 registered", value=154.742781)
+                lag_1_registered = st.number_input("Lag 1 registered")
+                lag_2_registered = st.number_input("Lag 2 registered")
+                lag_week_registered = st.number_input("Lag week registered")
+                lag_24_registered = st.number_input("Lag 24 registered")
                 new_columns=pd.DataFramr({"lag_1_casual":lag_1_casual,"lag_2_casual":lag_2_casual,"lag_week_casual":lag_week_casual,"lag_24_casual":lag_24_casual,"lag_1_registered":lag_1_registered,"lag_2_registered":lag_2_registered,"lag_week_registered":lag_week_registered,"lag_24_registered":lag_24_registered}) 
 
     # Map other categorical variables as needed

@@ -187,7 +187,7 @@ with tab1:
 
         st.divider()
         st.subheader("Predicted Demand Total Users:")
-        st.write(round(Y_pred_casual+Y_pred_registered),0)           
+        st.write(Y_pred_casual+Y_pred_registered)           
 
 
 with tab2: 

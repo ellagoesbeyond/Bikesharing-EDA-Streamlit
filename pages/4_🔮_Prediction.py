@@ -1,4 +1,3 @@
-
 # Autor: Elisabth Oeljeklaus
 # Date: 2023-11-08
 
@@ -48,7 +47,7 @@ with tab1:
     st.header("Input Parameters for Prediction")
     st.subheader("Weather Influence ")
     # Add sliders for numerical inputs
-    temp = st.slider('Temperature (in Celsius)', min_value=-10.0, max_value=40.0, value=20.0, step=0.5)
+    temp = st.slider('Temperature (in Celsius)', min_value=-10.0, max_value=40.0, step=0.5)
     humidity = st.slider('Humidity (in %)', min_value=0, max_value=100, value=50)
     windspeed = st.slider('Wind Speed (in km/h)', min_value=0.0, max_value=50.0, value=10.0, step=1.0)
     weather = st.selectbox('Weather condition', options=['Clear', 'Mist', 'Light Rain/Snow', 'Heavy Rain/Snow'])
@@ -142,7 +141,7 @@ with tab1:
         st.spinner(text='Prediction progress...')
         col1, col2 = st.columns(2)
        
-        user_input ["yr"]=1
+        user_input["yr"]=1
         user_input['hour_sin'] = np.sin(2 * np.pi * user_input['hr'] / 12.0)  # to account for daily seasonality
         user_input['hour_cos'] = np.cos(2 * np.pi * user_input['hr'] / 12.0) # to account for daily seasonality
        

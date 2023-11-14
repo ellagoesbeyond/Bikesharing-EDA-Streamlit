@@ -39,8 +39,8 @@ def registered_model():
 
 
     # Split predictors and target
-    target='casual'
-    non_target='registered'
+    target='registered'
+    non_target='casual'
 
     # Based on results of the model we introduce AR(2) to the data and MA(4)
     data['lag_1_casual']=data[target].shift(1)

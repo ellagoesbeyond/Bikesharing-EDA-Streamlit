@@ -188,7 +188,7 @@ if target_options == "Casual Users":
 
     st.divider()
     st.subheader("Historical Bike Usage and Forecast for Casual Users")
-    st.image("pics/casual_wholedata_Forecast.jpeg"")
+    st.image("pics/casual_wholedata_Forecast.jpeg")
     # Plot historical data (train data)
     #plt.figure(figsize=(35, 10))
     #sns.lineplot(x=dates_train,y= y_train, label='Observed', color='seagreen')

@@ -8,26 +8,27 @@ st.write("# Welcome to Group 6 Analysis 👋🚲")
 st.image("pics/header.jpg", use_column_width=True)
 
 #st.sidebar.success("Select a page.")
+col1, col2 = st.columns(2)
+with col1:
+  st.markdown(
+      """
+      *The administration of Washington D.C wants to make a deeper analysis of the usage of the bike-sharing service present in the city 
+      in order to build a predictor model that helps the public transport department anticipate better the provisioning of bikes in the city. 
+      For these purposes, some data is available for the years 2011 and 2012.*
 
-st.markdown(
-    """
-    *The administration of Washington D.C wants to make a deeper analysis of the usage of the bike-sharing service present in the city 
-    in order to build a predictor model that helps the public transport department anticipate better the provisioning of bikes in the city. 
-    For these purposes, some data is available for the years 2011 and 2012.*
+      **👈 Select a page you are interested in from the side bar**
 
-    **👈 Select a page you are interested in from the side bar**
-
-    ### Table of Contents
-    1. [Data Exploration](https://bikesharing-group06.streamlit.app/Analysis)
-    2. [Data Visualization](https://bikesharing-group06.streamlit.app/Visualization)
-    3. [Data Modelling](https://bikesharing-group06.streamlit.app/Modelling)
-    4. [Data Prediction](https://bikesharing-group06.streamlit.app/Prediction)
-    5. [Data Conclusion](https://bikesharing-group06.streamlit.app/Actions)
-    """
-   
-)
-
-st.image("pics/qr_code.png", width=200)
+      ### Table of Contents
+      1. [Data Exploration](https://bikesharing-group06.streamlit.app/Analysis)
+      2. [Data Visualization](https://bikesharing-group06.streamlit.app/Visualization)
+      3. [Data Modelling](https://bikesharing-group06.streamlit.app/Modelling)
+      4. [Data Prediction](https://bikesharing-group06.streamlit.app/Prediction)
+      5. [Data Conclusion](https://bikesharing-group06.streamlit.app/Actions)
+      """
+    
+  )
+with col2:
+  st.image("pics/qr_code.png", width=200)
 my_expander = st.expander(label='Assignment Instructions')
 with my_expander:
   """ **Main goals**

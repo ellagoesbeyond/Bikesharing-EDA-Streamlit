@@ -8,7 +8,7 @@ st.write("# Welcome to Group 6 Analysis 👋🚲")
 st.image("pics/header.jpg", use_column_width=True)
 
 #st.sidebar.success("Select a page.")
-st.markdwon("""
+st.markdown("""
       *The administration of Washington D.C wants to make a deeper analysis of the usage of the bike-sharing service present in the city 
       in order to build a predictor model that helps the public transport department anticipate better the provisioning of bikes in the city. 
       For these purposes, some data is available for the years 2011 and 2012.*

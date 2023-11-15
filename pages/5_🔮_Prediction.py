@@ -127,7 +127,7 @@ with tab1:
     if holiday =="Yes":
         holiday = 1
         workingday = 0
-    else:
+    elif holiday =="No":
         holiday = 0
         workinday = 1
 

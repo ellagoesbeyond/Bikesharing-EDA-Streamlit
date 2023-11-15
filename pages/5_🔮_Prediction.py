@@ -123,13 +123,13 @@ with tab1:
     else:
         weekday = 0
     
-
-    if holiday =="Yes":
-        holiday = 1
-        workingday = 0
-    elif holiday =="No":
+    workingday = 0
+    if holiday =="No":
         holiday = 0
-        workinday = 1
+        workingday = 1
+    else:
+        holiday = 1
+       
 
     user_input = pd.DataFrame(
         data=[[temp, humidity, windspeed, season, holiday, workingday, weather,hours,weekday, mnth]],

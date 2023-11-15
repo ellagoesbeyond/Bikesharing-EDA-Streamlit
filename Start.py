@@ -27,7 +27,7 @@ st.markdown(
    
 )
 
-st.image("pics/qr_code.jpg", use_column_width=True)
+st.image("pics/qr_code.png", use_column_width=True)
 my_expander = st.expander(label='Assignment Instructions')
 with my_expander:
   """ **Main goals**

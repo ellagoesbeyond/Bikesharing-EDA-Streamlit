@@ -47,7 +47,7 @@ with tab1:
     st.header("Input Parameters for Prediction")
     st.subheader("Weather Influence ")
     # Add sliders for numerical inputs
-    temp = st.slider('Temperature (in Celsius)', min_value=-10.0, max_value=40.0, step=0.5)
+    temp = st.slider('Temperature (in Celsius)', min_value=-10.0, max_value=40.0, value= 10.0 step=0.5)
     humidity = st.slider('Humidity (in %)', min_value=0, max_value=100, value=50)
     windspeed = st.slider('Wind Speed (in km/h)', min_value=0.0, max_value=50.0, value=10.0, step=1.0)
     weather = st.selectbox('Weather condition', options=['Clear', 'Mist', 'Light Rain/Snow', 'Heavy Rain/Snow'])
